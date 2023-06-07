@@ -1,0 +1,170 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[top=0.7in, bottom=0.7in, left=0.7in, right=0.7in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage{parskip}
+\usepackage{wasysym}
+\usepackage{fancyhdr}
+\usepackage{ragged2e}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{wrapfig}
+\usepackage{caption}
+
+% Question Types
+% --------------
+
+% Choose one option (bubbles)
+\newcommand{\chooseone}{{\Large$\Circle$\ \ }}
+
+% Choose all options that apply (boxes)
+\newcommand{\choosemany}{{\Large$\Square$\ \ }}
+
+% Fill in the blank
+\newcommand{\ansbox}[2]{
+    \begin{center}
+        \noindent\fbox{
+            \parbox{#1\textwidth}{
+                \textbf{Answer:} \vspace{#2em}
+            }
+        }
+    \end{center}
+}
+
+% Multiple choice lists
+\newlist{multlist}{enumerate}{1}
+\setlist[multlist, 1]{
+    label=\alph{multlisti}. \chooseone,
+    leftmargin=4.9em
+}
+
+% Page Styling
+% ------------
+
+% Quiz details
+\title{Sense and Sensibility and Science Quiz $n$}
+\author{Letters and Sciences 22}
+\date{Month Day, Year}
+
+% Name and SID boxes
+\setlength{\headheight}{1in}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt} % remove lines as well
+\fancyhf{}
+\fancyhead[C]{
+    \begin{minipage}{.4\linewidth}
+        \begin{flushleft}
+            \noindent\fbox{
+                \parbox{0.8\textwidth}{
+                    \textbf{Name:} \vspace{2em}
+                }
+            }
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}{.4\linewidth}
+        \begin{flushright}
+            \noindent\fbox{
+                \parbox{0.8\textwidth}{
+                    \textbf{SID:} \vspace{2em}
+                }
+            }
+        \end{flushright}
+    \end{minipage}
+}
+
+% Page numbers
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{80pt}
+\fancyfoot[C]{Page \thepage}
+
+\begin{document}
+
+% Title Page
+% ----------
+
+% Quiz title and entry box renewal
+\maketitle
+\thispagestyle{fancy}
+
+% Instructions
+\section*{Instructions}
+
+\begin{itemize}
+    \item Use a \textbf{dark} pen or pencil, and write \textbf{inside} the answer boxes provided.
+    \item You will have three hours to complete the exam, but you do not need to take the whole time.
+    \item Write your name and SID \textbf{clearly} at the top of \textbf{every} page, inside the boxes provided.
+    \item No collaboration allowed, no electronic devices.
+    \item Raise your hand if you have any clarifying questions. If the course staff decides to answer them then they will use the projector to share the answer with the whole class. If an answer is not put on the projector, then the course staff cannot answer that question.
+    \item If you need to leave and use the restroom, first turn in your phone to the course staff at the front of the room. They will keep it safe in your absence.
+    % I REMOVED THE REQUIREMENT FOR TURNING IN YOUR NOTE SHEETS
+    % \item If you prepared one, turn in your two double-sided sheets of notes along with this exam.
+    \item For multiple choice questions (the ones with circles), make sure you fill the circle in \textbf{completely}.
+    \item If you answered with pen but need to change your answer, your updated answer must be marked \textbf{extremely clearly} to get credit.
+    \item \textbf{WAIT UNTIL THE START OF THE EXAM TO TURN TO THE NEXT PAGE.}
+\end{itemize}
+
+\newpage
+
+% Questions
+% ---------
+
+\section{True or False Question}
+
+For each of the following, select whether the statement is true or false.
+
+\begin{enumerate}
+    \item Could it be?
+    
+    \chooseone True \qquad \chooseone False
+    \item Perchance?
+    
+    \chooseone True \qquad \chooseone False
+\end{enumerate}
+
+\section{Multiple Choice Question}
+
+Which letter is the best?
+
+\begin{multlist}
+    \item M
+    \item O
+    \item I
+    \item S
+    \item T
+\end{multlist}
+
+\section{Short Response}
+
+Please write the word ``bagel'' as many times as you can in the box below. You will be graded based on how many instances of the word ``bagel'' you can fit in the box.
+
+\ansbox{0.95}{23}
+
+\newpage
+
+\section{Multiple Part Question}
+
+For each of the following, have fun and do you best!
+\begin{enumerate}
+    \item How many is too many?
+    \begin{multlist}
+        \item Three
+        \item Eight or more
+        \item At least a lot
+        \item Not enough
+    \end{multlist}
+    \item What is the coolest place to fritz a scoopla?
+    \ansbox{0.9}{40}
+\end{enumerate}
+
+\end{document}
